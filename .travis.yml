@@ -11,6 +11,6 @@ install:
     - pip install -r requirements.txt
     - pip install .
 script:
-    - sphinx-build -E -W -b linkcheck docs/source build
+    # - sphinx-build -E -W -b linkcheck docs/source build
     - pip uninstall -y riscv-dv
     - flake8 --show-source pygen/pygen_src/ --config=.flake8

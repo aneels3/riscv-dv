@@ -1522,7 +1522,7 @@ class riscv_instr_pkg:
         # Push all GPRs to kernel stack
         for i in range(1, 32):
             instr.append(pkg_ins.format_string("{} x{}, {}(x{})".format(
-                store_instr, i, int(i * (rcs.XLEN / 8)), sp)))
+                store_instr, i, int(i * (rcs.XLEN // 8)), sp)))
 
     def pop_gpr_from_kernel_stack(self, status, scratch, mprv, sp, tp, instr):
         load_instr = ''
