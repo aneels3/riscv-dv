@@ -193,7 +193,7 @@ class riscv_push_stack_instr(riscv_rand_instr_stream):
         self.num_of_redundant_instr = random.randrange(3, 10)
         self.initialize_instr_list(self.num_of_redundant_instr)
 
-    def gen_push_stack_instr(self, stack_len, allow_branch=1):
+    def gen_push_stack_instr(self, stack_len, allow_branch = 1):
         self.stack_len = stack_len
         self.init()
         self.push_stack_instr = [0] * (self.num_of_reg_to_save + 1)
